@@ -4,7 +4,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.brijframework.container.bootstrap.BootstrapContainer;
 import org.brijframework.context.Context;
-import org.brijframework.context.module.ModuleContext;
 
 public interface BootstrapContext extends Context{
 
@@ -20,6 +19,6 @@ public interface BootstrapContext extends Context{
 	
 	public void poststart( BootstrapContainer container) ;
 
-	ModuleContext getModuleContext(Class<? extends ModuleContext> moduleContextCls);
+	<T>T getContext(Class<T> moduleContextCls);
 	
 }
